@@ -25,6 +25,14 @@
 		EA92002D29D02EAF00626E13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA92002C29D02EAF00626E13 /* ViewController.swift */; };
 		EA92002F29D02ED800626E13 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA92002E29D02ED800626E13 /* LoginViewController.swift */; };
 		EA92003129D034B000626E13 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA92003029D034B000626E13 /* RegisterViewController.swift */; };
+		EA98D9132A1BA6E000EC1579 /* UserFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA98D9122A1BA6E000EC1579 /* UserFeedModel.swift */; };
+		EA98D9152A1BA8A500EC1579 /* UserFeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA98D9142A1BA8A500EC1579 /* UserFeedDataManager.swift */; };
+		EA98D9192A1BCC7900EC1579 /* DeleteUserFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA98D9182A1BCC7900EC1579 /* DeleteUserFeed.swift */; };
+		EA98D91B2A1C6CC400EC1579 /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA98D91A2A1C6CC400EC1579 /* ReelsViewController.swift */; };
+		EA98D9212A1C88AA00EC1579 /* ReelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA98D9202A1C88AA00EC1579 /* ReelsCell.swift */; };
+		EA98D9232A1C8B1D00EC1579 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA98D9222A1C8B1D00EC1579 /* VideoPlayerView.swift */; };
+		EA98D9282A1CE9B000EC1579 /* dummyVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EA98D9262A1CE9B000EC1579 /* dummyVideo.mp4 */; };
+		EA98D9292A1CE9B000EC1579 /* dummyVideo02.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EA98D9272A1CE9B000EC1579 /* dummyVideo02.mp4 */; };
 		EAF1E4532A13B8690030F188 /* FeedAPIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1E4522A13B8690030F188 /* FeedAPIInput.swift */; };
 		EAF1E4552A13B9270030F188 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1E4542A13B9270030F188 /* FeedModel.swift */; };
 		EAF1E4572A13B9700030F188 /* FeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF1E4562A13B9700030F188 /* FeedDataManager.swift */; };
@@ -78,6 +86,14 @@
 		EA92002C29D02EAF00626E13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA92002E29D02ED800626E13 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA92003029D034B000626E13 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		EA98D9122A1BA6E000EC1579 /* UserFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedModel.swift; sourceTree = "<group>"; };
+		EA98D9142A1BA8A500EC1579 /* UserFeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedDataManager.swift; sourceTree = "<group>"; };
+		EA98D9182A1BCC7900EC1579 /* DeleteUserFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserFeed.swift; sourceTree = "<group>"; };
+		EA98D91A2A1C6CC400EC1579 /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
+		EA98D9202A1C88AA00EC1579 /* ReelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsCell.swift; sourceTree = "<group>"; };
+		EA98D9222A1C8B1D00EC1579 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		EA98D9262A1CE9B000EC1579 /* dummyVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dummyVideo.mp4; path = ../../../../../Downloads/dummyVideo.mp4; sourceTree = "<group>"; };
+		EA98D9272A1CE9B000EC1579 /* dummyVideo02.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dummyVideo02.mp4; path = ../../../../../Downloads/dummyVideo02.mp4; sourceTree = "<group>"; };
 		EAF1E4522A13B8690030F188 /* FeedAPIInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAPIInput.swift; sourceTree = "<group>"; };
 		EAF1E4542A13B9270030F188 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		EAF1E4562A13B9700030F188 /* FeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDataManager.swift; sourceTree = "<group>"; };
@@ -165,6 +181,7 @@
 		EA709E832A09E4CA00618014 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				EA98D9112A1BA6CB00EC1579 /* UserFeedDataManager */,
 				EA709E862A09E8A700618014 /* Cell */,
 				EA709E842A09E4EE00618014 /* ProfileViewController.swift */,
 			);
@@ -196,6 +213,60 @@
 				EA709E882A09E8D800618014 /* ProfileCollectionViewCell.xib */,
 			);
 			path = ProfileCell;
+			sourceTree = "<group>";
+		};
+		EA98D90E2A1BA4D200EC1579 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EAF3E68329C9DBAE006B16BE /* AppDelegate.swift */,
+				EAF3E68529C9DBAE006B16BE /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EA98D90F2A1BA4EE00EC1579 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				EA92003029D034B000626E13 /* RegisterViewController.swift */,
+				EA92002E29D02ED800626E13 /* LoginViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		EA98D9102A1BA50D00EC1579 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				EA709E832A09E4CA00618014 /* Profile */,
+				EA2DE1F429FFD30500F54D67 /* Home */,
+				EA98D90F2A1BA4EE00EC1579 /* Authentication */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		EA98D9112A1BA6CB00EC1579 /* UserFeedDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				EA98D9172A1BCC6500EC1579 /* DeleteUserFeed */,
+				EA98D9162A1BCC5800EC1579 /* UserFeed */,
+			);
+			path = UserFeedDataManager;
+			sourceTree = "<group>";
+		};
+		EA98D9162A1BCC5800EC1579 /* UserFeed */ = {
+			isa = PBXGroup;
+			children = (
+				EA98D9122A1BA6E000EC1579 /* UserFeedModel.swift */,
+				EA98D9142A1BA8A500EC1579 /* UserFeedDataManager.swift */,
+			);
+			path = UserFeed;
+			sourceTree = "<group>";
+		};
+		EA98D9172A1BCC6500EC1579 /* DeleteUserFeed */ = {
+			isa = PBXGroup;
+			children = (
+				EA98D9182A1BCC7900EC1579 /* DeleteUserFeed.swift */,
+			);
+			path = DeleteUserFeed;
 			sourceTree = "<group>";
 		};
 		EAF1E4512A13B8110030F188 /* FeedDataManager */ = {
@@ -241,20 +312,21 @@
 		EAF3E68229C9DBAE006B16BE /* instagram */ = {
 			isa = PBXGroup;
 			children = (
-				EA709E832A09E4CA00618014 /* Profile */,
-				EA2DE1F429FFD30500F54D67 /* Home */,
-				EAF3E68329C9DBAE006B16BE /* AppDelegate.swift */,
-				EAF3E68529C9DBAE006B16BE /* SceneDelegate.swift */,
+				EA98D90E2A1BA4D200EC1579 /* App */,
+				EA98D9102A1BA50D00EC1579 /* UserInterface */,
 				EAF3E68929C9DBAE006B16BE /* Main.storyboard */,
-				EA92003029D034B000626E13 /* RegisterViewController.swift */,
-				EA92002E29D02ED800626E13 /* LoginViewController.swift */,
+				EA98D9202A1C88AA00EC1579 /* ReelsCell.swift */,
+				EA98D9222A1C8B1D00EC1579 /* VideoPlayerView.swift */,
+				EA98D91A2A1C6CC400EC1579 /* ReelsViewController.swift */,
+				EAF3E68E29C9DBAF006B16BE /* LaunchScreen.storyboard */,
 				EA92002C29D02EAF00626E13 /* ViewController.swift */,
 				EAF3E68C29C9DBAF006B16BE /* Assets.xcassets */,
-				EAF3E68E29C9DBAF006B16BE /* LaunchScreen.storyboard */,
 				EAF3E69129C9DBAF006B16BE /* Info.plist */,
 				EA100E9129D374F600CB8C3C /* UIView+Extension.swift */,
 				EA100E9329D375FA00CB8C3C /* UIViewController+Extension.swift */,
 				EA100E9529D37C0A00CB8C3C /* UserInfo.swift */,
+				EA98D9262A1CE9B000EC1579 /* dummyVideo.mp4 */,
+				EA98D9272A1CE9B000EC1579 /* dummyVideo02.mp4 */,
 			);
 			path = instagram;
 			sourceTree = "<group>";
@@ -367,7 +439,9 @@
 			files = (
 				EA709E902A0B5F5B00618014 /* PostCollectionViewCell.xib in Resources */,
 				EAF3E69029C9DBAF006B16BE /* LaunchScreen.storyboard in Resources */,
+				EA98D9292A1CE9B000EC1579 /* dummyVideo02.mp4 in Resources */,
 				EA2DE1FB29FFD76500F54D67 /* FeedTableViewCell.xib in Resources */,
+				EA98D9282A1CE9B000EC1579 /* dummyVideo.mp4 in Resources */,
 				EAF3E68D29C9DBAF006B16BE /* Assets.xcassets in Resources */,
 				EA709E8A2A09E8D800618014 /* ProfileCollectionViewCell.xib in Resources */,
 				EA2DE1FF2A02A2F400F54D67 /* StoryTableViewCell.xib in Resources */,
@@ -442,22 +516,28 @@
 				EA100E9229D374F600CB8C3C /* UIView+Extension.swift in Sources */,
 				EA92002F29D02ED800626E13 /* LoginViewController.swift in Sources */,
 				EAF1E45C2A13E3030030F188 /* FeedUploadModel.swift in Sources */,
+				EA98D9152A1BA8A500EC1579 /* UserFeedDataManager.swift in Sources */,
 				EAF1E4552A13B9270030F188 /* FeedModel.swift in Sources */,
 				EA92003129D034B000626E13 /* RegisterViewController.swift in Sources */,
 				EAF1E45A2A13E2520030F188 /* FeedUploadInput.swift in Sources */,
+				EA98D9132A1BA6E000EC1579 /* UserFeedModel.swift in Sources */,
 				EA2DE1FE2A02A2F400F54D67 /* StoryTableViewCell.swift in Sources */,
 				EA2DE2022A02ACF500F54D67 /* StoryCollectionViewCell.swift in Sources */,
 				EA709E8F2A0B5F5B00618014 /* PostCollectionViewCell.swift in Sources */,
 				EAF3E68429C9DBAE006B16BE /* AppDelegate.swift in Sources */,
 				EA100E9629D37C0A00CB8C3C /* UserInfo.swift in Sources */,
+				EA98D9212A1C88AA00EC1579 /* ReelsCell.swift in Sources */,
 				EA2DE1F629FFD32600F54D67 /* HomeViewController.swift in Sources */,
 				EAF1E45F2A13E38F0030F188 /* FeedUploadDataManager.swift in Sources */,
 				EA100E9429D375FA00CB8C3C /* UIViewController+Extension.swift in Sources */,
+				EA98D91B2A1C6CC400EC1579 /* ReelsViewController.swift in Sources */,
 				EA92002D29D02EAF00626E13 /* ViewController.swift in Sources */,
 				EAF1E4532A13B8690030F188 /* FeedAPIInput.swift in Sources */,
 				EA709E892A09E8D800618014 /* ProfileCollectionViewCell.swift in Sources */,
 				EA709E852A09E4EE00618014 /* ProfileViewController.swift in Sources */,
 				EAF1E4572A13B9700030F188 /* FeedDataManager.swift in Sources */,
+				EA98D9232A1C8B1D00EC1579 /* VideoPlayerView.swift in Sources */,
+				EA98D9192A1BCC7900EC1579 /* DeleteUserFeed.swift in Sources */,
 				EAF3E68629C9DBAE006B16BE /* SceneDelegate.swift in Sources */,
 				EA2DE1FA29FFD76500F54D67 /* FeedTableViewCell.swift in Sources */,
 			);
