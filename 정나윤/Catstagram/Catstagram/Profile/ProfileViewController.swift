@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     
     
     //MARK : -Properties
@@ -16,6 +16,8 @@ class ProfileViewController: UIViewController {
     var userPosts : [GetUserPosts]? {
         didSet { self.profileCollectionView.reloadData() }
     }
+    var deletedIndex : Int?
+    
     //MARK : -Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,29 @@ class ProfileViewController: UIViewController {
         setupData()
     }
     //MARK : -Actions
+    //추가한 데이터 삭제 하기
+    @objc //object c를 감쌈
+    func didLongPressCell(gestureRecognizer: UILongPressGestureRecognizer) {
+        if gestureRecognizer.state != .began{return}
+        
+        let position = gestureRecognizer.location(in: profileCollectionView)
+        
+        if let indexPath = profileCollectionView?.indexPathForItem(at: position) {
+            print("DEBUG: ", indexPath.item)
+            
+            guard let userPosts = self.userPosts else {return}
+            let cellData = userPosts[indexPath.item]
+            self.deletedIndex = indexPath.item
+
+            if let postIdx = cellData.postIdx {
+                
+                //삭제 API를 호출
+                UserFeedDataManager().deleteUserFeed(self, postIdx)
+            }
+            
+        }
+    }
+    
     //MARK : -Helpers
     private func setupCollectionView(){
         // delegate 연결
@@ -33,6 +58,12 @@ class ProfileViewController: UIViewController {
         
         //PostCollectionViewCell
         profileCollectionView.register(UINib(nibName: "PostCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
+        
+        let gesture = UILongPressGestureRecognizer(target: self, action: #selector(didLongPressCell(gestureRecognizer:)))
+        gesture.minimumPressDuration = 0.66
+        gesture.delegate = self
+        gesture.delaysTouchesBegan = true
+        profileCollectionView.addGestureRecognizer(gesture)
     }
     // 이미지 뷰의 이미지 업롣
     private func setupData(){
@@ -73,7 +104,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             }
             let itemIndex = indexPath.item
             if let cellData = self.userPosts {
-                //데이터가 있는 경우, cell 데이터를 전달
+                //데이터가 있는 경우, cell 데이터 전달
                 cell.setupData(cellData[itemIndex].postImgUrl)
 
             }
@@ -120,5 +151,12 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout{
 extension ProfileViewController{
     func successFeedAPI(_ result: UserFeedModel) {
         self.userPosts = result.result?.getUserPosts
+    }
+    func successDeletePostAPI(_ isSuccess: Bool){
+        guard isSuccess else {return}
+        
+        if let deletedIndex = self.deletedIndex{
+            self.userPosts?.remove(at: deletedIndex)
+        }
     }
 }

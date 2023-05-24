@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5h5-B9-9Lo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Vj-xp-QTw">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -26,7 +26,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5i-b8-oIg">
                                 <rect key="frame" x="10" y="409" width="373" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="passwordTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="4OC-AY-1XJ"/>
                                 </connections>
@@ -463,6 +463,44 @@
             </objects>
             <point key="canvasLocation" x="88" y="1355"/>
         </scene>
+        <!--릴스-->
+        <scene sceneID="XJt-on-aNZ">
+            <objects>
+                <viewController storyboardIdentifier="ReelsVC" id="mEU-Do-8cO" customClass="ReelsViewController" customModule="Catstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ReelsVC" id="qQj-Ng-EeB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ESt-fg-TiV">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Wg-uf-AUP">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qrn-Vi-hcW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ESt-fg-TiV" firstAttribute="top" secondItem="Qrn-Vi-hcW" secondAttribute="top" id="5u9-dX-2Yt"/>
+                            <constraint firstItem="ESt-fg-TiV" firstAttribute="leading" secondItem="Qrn-Vi-hcW" secondAttribute="leading" id="K39-pt-l27"/>
+                            <constraint firstItem="Qrn-Vi-hcW" firstAttribute="bottom" secondItem="ESt-fg-TiV" secondAttribute="bottom" id="Obn-eU-GnR"/>
+                            <constraint firstItem="Qrn-Vi-hcW" firstAttribute="trailing" secondItem="ESt-fg-TiV" secondAttribute="trailing" id="niU-tQ-jtO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="릴스" image="photo.on.rectangle.angled" catalog="system" id="Ro8-SH-WB4"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ESt-fg-TiV" id="pOq-QD-2uk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o1A-Nn-PmR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="1360"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7XO-6v-b7x">
             <objects>
@@ -476,6 +514,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="dox-gX-qJc" kind="relationship" relationship="viewControllers" id="DoS-yN-X6d"/>
+                        <segue destination="mEU-Do-8cO" kind="relationship" relationship="viewControllers" id="kxY-mn-AR7"/>
                         <segue destination="Ruq-Yl-98F" kind="relationship" relationship="viewControllers" id="IEx-0w-q6r"/>
                     </connections>
                 </tabBarController>
@@ -531,6 +570,7 @@
         <image name="ic_home_upload" width="512" height="512"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="98"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

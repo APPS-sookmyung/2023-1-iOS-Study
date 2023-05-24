@@ -1,9 +1,3 @@
-//
-//  HomeViewController.swift
-//  Catstagram
-//
-//  Created by 정나윤 on 2023/04/30.
-//
 
 import UIKit
 import Kingfisher
