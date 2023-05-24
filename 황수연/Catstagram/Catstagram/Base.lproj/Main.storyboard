@@ -428,6 +428,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="ic_home_upload"/>
+                                        <connections>
+                                            <action selector="buttonGoAlbum:" destination="qC8-p6-kkQ" eventType="touchUpInside" id="pUP-Tn-XGR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHY-zg-UZw">
                                         <rect key="frame" x="334" y="12.5" width="25" height="25"/>
@@ -471,7 +474,7 @@
                             <constraint firstItem="3ge-T1-PgC" firstAttribute="leading" secondItem="f2v-o7-jCj" secondAttribute="leading" id="opD-Le-gyB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="3hc-UK-5EQ"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="3hc-UK-5EQ"/>
                     <connections>
                         <outlet property="tableView" destination="F3F-Ug-a7Z" id="wnq-7U-YFh"/>
                     </connections>
@@ -488,6 +491,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="qC8-p6-kkQ" kind="relationship" relationship="viewControllers" id="VDK-8b-MGB"/>
@@ -502,7 +506,7 @@
         <scene sceneID="gz1-tB-cxz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UHH-e1-iNq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="mVz-JS-qLI"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="mVz-JS-qLI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jfj-k9-Kol">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -521,11 +525,13 @@
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
         <image name="ic_home_heart" width="512" height="512"/>
         <image name="ic_home_send" width="512" height="512"/>
         <image name="ic_home_upload" width="512" height="512"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

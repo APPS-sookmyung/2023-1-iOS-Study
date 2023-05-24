@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class HomeViewController: UIViewController {
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { // 한 섹션에 몇 개의 셀?
 //
@@ -18,6 +18,9 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var arrayCat : [FeedModel] = []
+    
+    let imagePickerViewController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +34,24 @@ class HomeViewController: UIViewController {
         let storyNib = UINib(nibName: "StoryTableViewCell", bundle: nil)
         tableView.register(storyNib, forCellReuseIdentifier: "StoryTableViewCell")
 
+        
+        let input = FeedAPIInput(limit: 5, page: 0, api_key: "live_Sq8CMi2dRm9KrbLwVTXqGwG8tH1ss60AwJLmnmygavdHNDgDB5wDD4wdWJgUlsW2")
+        FeedDataManager().FeedDataManager(input,self)
+        
+        imagePickerViewController.delegate = self
     }
-
+    @IBAction func buttonGoAlbum(_ sender: Any) {
+        self.imagePickerViewController.sourceType = .photoLibrary
+        self.present(imagePickerViewController, animated: true, completion: nil)
+    }
+    
 }
 
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return arrayCat.count+1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,7 +65,11 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath) as? FeedTableViewCell else{
                 return UITableViewCell()
             }
-            cell.selectionStyle = .none
+            if let urlString = arrayCat[indexPath.row-1].url{
+                let url = URL(string:urlString)
+                cell.imageViewFeed.kf.setImage(with: url)
+            }
+            
             return cell
         }
     }
@@ -87,5 +103,23 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 50, height: 60)
+    }
+}
+extension HomeViewController {
+    func successAPI(_ result:[FeedModel]){
+        arrayCat = result
+        tableView.reloadData()
+    }
+}
+
+extension HomeViewController :UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            let imageString = "https://firebasestorage.googleapis.com/v0/b/catstargram-d7fbf.appspot.com/o/Cat1?alt=media&token=e92d1af6-ceb3-4a0c-9ba9-acd5cf534a42"
+            let input = FeedUploadInput(content: "고양이 입니다.", postImgsUrl: [imageString])
+            FeedUploadDataManager().posts(self, input)
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
