@@ -56,12 +56,15 @@ class LoginViewController: UIViewController {
         if userInfo.email == self.email &&
             userInfo.password == self.pwd{
             
+            // 화면 전환
             let vc = storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as! UITabBarController
             
-            vc.modalPresentationStyle = .fullScreen
+            // 코드 변경 전
+            //vc.modalPresentationStyle = .fullScreen
+            //self.present(vc, animated: true, completion: nil)
             
-            self.present(vc, animated: true, completion: nil)
-        }else{
+            // 코드 변경 후
+            self.view.window?.windowScene?.keyWindow?.rootViewController = vc
         }
         
     }
