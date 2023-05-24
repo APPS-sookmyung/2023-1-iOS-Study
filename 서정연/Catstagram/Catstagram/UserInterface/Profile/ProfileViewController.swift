@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
     // MARK: - Properties
     @IBOutlet weak var profileCollectionView: UICollectionView!
@@ -16,6 +16,9 @@ class ProfileViewController: UIViewController {
         // 데이터 전달 해준 다음에 UI 만들도록
         didSet{self.profileCollectionView.reloadData()}
     }
+    
+    // 삭제된 index
+    var deletedIndex: Int?
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -28,6 +31,30 @@ class ProfileViewController: UIViewController {
         // 네트워크 통신
         setUpData()
         
+    }
+    
+    // MARK: -Actions
+    @objc
+    func didLongPressCell(gestureRecognizer : UILongPressGestureRecognizer){
+        if gestureRecognizer.state != .began {return} // 시작한 상태가 아니라면 종료(오래 눌렀을 때만 동작하도록하는 방어 코드)
+        let position = gestureRecognizer.location(in: profileCollectionView)
+        
+        if let indexPath = profileCollectionView?.indexPathForItem(at: position){
+            print("DEBUG: ", indexPath.item) // 오래 누른 부분의 위치(어떤 cell)인지 확인
+            
+            guard let userPosts = self.userPosts else {return}
+            let cellData = userPosts[indexPath.item]
+            self.deletedIndex = indexPath.item
+            if let postIdx = cellData.postIdx{
+                // 삭제 API 호출(서버 데이터 삭제)
+                UserFeedDataManager().deleteUserFeed(self, postIdx)
+                
+                // 로컬도 동시에 삭제(삭제된 API 다시 가져오는 것보다 데이터 사용량 줄일 수 있음) -> issue 발생 시 데이터 불일치 발생 가능
+                
+            }
+            
+            
+        }
     }
     
     // MARK: -Properties
@@ -45,6 +72,17 @@ class ProfileViewController: UIViewController {
         profileCollectionView.register(
             UINib(nibName: "PostCollectionViewCell", bundle: nil),
             forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
+        
+        // gesture 생성
+        let gesture = UILongPressGestureRecognizer(
+            target: self, action: #selector(didLongPressCell(gestureRecognizer:))
+        )
+        
+        // gesture 속성 설정
+        gesture.minimumPressDuration = 0.66
+        gesture.delegate = self
+        gesture.delaysTouchesBegan = true
+        profileCollectionView.addGestureRecognizer(gesture)
     }
     
     // 데이터 가져옴
@@ -149,5 +187,14 @@ extension ProfileViewController {
     func successFeedAPI(_ result : UserFeedModel){
         
         self.userPosts = result.result?.getUserPosts // 받아온 데이터 전달
+    }
+    
+    // 로컬에서도 직접 삭제
+    func successDeletePostAPI(_ isSuccess : Bool){
+        guard isSuccess else { return}
+        
+        if let deletedIndex = self.deletedIndex{
+            self.userPosts?.remove(at: deletedIndex)
+        }
     }
 }
