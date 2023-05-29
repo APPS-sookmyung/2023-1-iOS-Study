@@ -1,12 +1,3 @@
-//
-//  UserFeedModel.swift
-//  Catstagram
-//
-//  Created by 정나윤 on 2023/05/17.
-//
-
-import Foundation
-
 struct UserFeedModel : Decodable {
         let isSuccess: Bool? 
         let code: Int?
