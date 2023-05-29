@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jJX-Af-i3g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ydH-yJ-ucL">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="height" constant="34" id="2on-Q9-GuF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="passwordTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="QjZ-fe-fxX"/>
                                 </connections>
@@ -480,7 +480,7 @@
                             <constraint firstItem="sNw-0u-wxO" firstAttribute="leading" secondItem="OU2-Tt-mCu" secondAttribute="leading" id="wYd-pP-aKS"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="cwx-fb-nVq"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="cwx-fb-nVq"/>
                     <connections>
                         <outlet property="tableView" destination="sNw-0u-wxO" id="qHC-vU-9xV"/>
                     </connections>
@@ -488,6 +488,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yg1-Ve-TFp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-408" y="1544"/>
+        </scene>
+        <!--릴스-->
+        <scene sceneID="eyS-x0-PMB">
+            <objects>
+                <viewController storyboardIdentifier="ReelsVC" id="07j-Cc-Grb" customClass="ReelsViewController" customModule="instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ga1-M7-35h">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XxB-uN-u6r">
+                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zme-hI-fRx">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cYd-pu-7mh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cYd-pu-7mh" firstAttribute="trailing" secondItem="XxB-uN-u6r" secondAttribute="trailing" id="3g8-gF-S35"/>
+                            <constraint firstItem="XxB-uN-u6r" firstAttribute="top" secondItem="cYd-pu-7mh" secondAttribute="top" id="SPF-0u-LyR"/>
+                            <constraint firstItem="XxB-uN-u6r" firstAttribute="leading" secondItem="cYd-pu-7mh" secondAttribute="leading" id="V6I-QY-p9w"/>
+                            <constraint firstItem="cYd-pu-7mh" firstAttribute="bottom" secondItem="XxB-uN-u6r" secondAttribute="bottom" id="bC7-gV-zdN"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="릴스" id="jQs-xp-1GM"/>
+                    <connections>
+                        <outlet property="collectionView" destination="XxB-uN-u6r" id="qnZ-lC-wwU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJC-rS-zmh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="1554"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DW4-Zp-vdL">
@@ -497,9 +535,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="5bV-g9-TCq" kind="relationship" relationship="viewControllers" id="oLc-sf-PYi"/>
+                        <segue destination="07j-Cc-Grb" kind="relationship" relationship="viewControllers" id="4Lb-gD-9bM"/>
                         <segue destination="qG9-kB-Amx" kind="relationship" relationship="viewControllers" id="BWF-eT-Vvg"/>
                     </connections>
                 </tabBarController>
@@ -529,7 +569,7 @@
         <scene sceneID="elj-Tt-gb9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qG9-kB-Amx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="5Hg-dS-JNK"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="5Hg-dS-JNK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0RB-O9-6kl">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -548,11 +588,13 @@
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
         <image name="ic_home_heart" width="512" height="512"/>
         <image name="ic_home_send" width="512" height="512"/>
         <image name="ic_home_upload" width="512" height="512"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
