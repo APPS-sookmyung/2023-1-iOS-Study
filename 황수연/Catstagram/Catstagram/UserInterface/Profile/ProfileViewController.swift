@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     // MARK: - Properties
     @IBOutlet weak var profileCollectionView: UICollectionView!
     
@@ -17,6 +17,8 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    var deletedIndex: Int?
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,28 @@ class ProfileViewController: UIViewController {
     }
     
     // MARK: - Actions
+    @objc
+    func didLongPressCell(gestureRecognizer: UILongPressGestureRecognizer){
+        // 시작한 상태가 아니라면 리턴(종료) - 방어 코드(버그 막기 위한)
+        if gestureRecognizer.state != .began { return }
+        
+        let position = gestureRecognizer.location(in: profileCollectionView)
+        
+        if let indexPath = profileCollectionView?.indexPathForItem(at: position) {
+            print("DEBUG: ", indexPath.item)
+            
+            // 삭제 api 호출
+            // 이때 전달해줘야할 postIdx 는 getUserPosts 배열에서 받을 수 있음..
+            guard let userPosts = self.userPosts else { return }
+            let cellData = userPosts[indexPath.item]
+            
+            self.deletedIndex = cellData.postIdx
+            if let postIdx = cellData.postIdx {
+                UserFeedDataManager().deleteUserFeed(self, postIdx)
+            }
+            
+        }
+    }
     
     // MARK: - Helpers
     private func setupCollectionView() {
@@ -38,6 +62,18 @@ class ProfileViewController: UIViewController {
         // collection view에 피드 셀 등록
         profileCollectionView.register(
             UINib(nibName: "PostCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
+        
+        // collection view와 UIGesutureRecognizerDelegate 연결
+        let gesture = UILongPressGestureRecognizer(
+            target: self,
+            action: #selector(didLongPressCell(gestureRecognizer:))
+        )  // 제스쳐가 생성됨
+        
+        // 제스쳐에 속성 넣기
+        gesture.minimumPressDuration = 0.66
+        gesture.delegate = self
+        gesture.delaysTouchesBegan = true
+        profileCollectionView.addGestureRecognizer(gesture)
     }
     
     private func setupData() {
@@ -139,5 +175,16 @@ extension ProfileViewController {
     func successFeedAPI(_ result: UserFeedModel){
         //self.userPosts = result.userPosts
         self.userPosts = result.result?.userPosts
+    }
+    
+    func successDeletePostAPI(_ isSuccess: Bool){
+        if isSuccess {
+            if let deletedIndex = self.deletedIndex {
+                self.userPosts?.remove(at: deletedIndex)
+            }
+        }
+        else {
+            return
+        }
     }
 }

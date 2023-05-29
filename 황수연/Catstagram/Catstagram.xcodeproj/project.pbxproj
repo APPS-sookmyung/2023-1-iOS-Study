@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081414C82A1A1625008542C5 /* DeleteUserFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081414C72A1A1625008542C5 /* DeleteUserFeed.swift */; };
+		081414CA2A1A1EE5008542C5 /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081414C92A1A1EE5008542C5 /* ReelsViewController.swift */; };
+		081414CF2A1A1FCC008542C5 /* ReelsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081414CD2A1A1FCC008542C5 /* ReelsCollectionViewCell.swift */; };
+		081414D02A1A1FCC008542C5 /* ReelsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 081414CE2A1A1FCC008542C5 /* ReelsCollectionViewCell.xib */; };
+		081414D22A1A2ECF008542C5 /* ReelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081414D12A1A2ECF008542C5 /* ReelsCell.swift */; };
+		081414D42A1A3136008542C5 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081414D32A1A3136008542C5 /* VideoPlayerView.swift */; };
 		08230D3029CF017300807BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08230D2F29CF017300807BA2 /* AppDelegate.swift */; };
 		08230D3229CF017300807BA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08230D3129CF017300807BA2 /* SceneDelegate.swift */; };
 		08230D3429CF017300807BA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08230D3329CF017300807BA2 /* ViewController.swift */; };
@@ -23,6 +29,8 @@
 		083131B62A06421B00B86D3C /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083131B42A06421B00B86D3C /* ProfileCollectionViewCell.xib */; };
 		083131BB2A07952D00B86D3C /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083131B92A07952D00B86D3C /* PostCollectionViewCell.swift */; };
 		083131BC2A07952D00B86D3C /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083131BA2A07952D00B86D3C /* PostCollectionViewCell.xib */; };
+		084D83562A1A429500356CE3 /* dummyVideo01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 084D83552A1A429500356CE3 /* dummyVideo01.mp4 */; };
+		084D83582A1A42C500356CE3 /* dummyVideo02.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 084D83572A1A42C500356CE3 /* dummyVideo02.mp4 */; };
 		0853E4732A13829400FE4889 /* FeedUploadInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0853E4722A13829400FE4889 /* FeedUploadInput.swift */; };
 		0853E4752A1382F100FE4889 /* FeedUploadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0853E4742A1382F100FE4889 /* FeedUploadModel.swift */; };
 		0853E4772A1383D600FE4889 /* FeedUploadDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0853E4762A1383D600FE4889 /* FeedUploadDataManager.swift */; };
@@ -65,6 +73,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		081414C72A1A1625008542C5 /* DeleteUserFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserFeed.swift; sourceTree = "<group>"; };
+		081414C92A1A1EE5008542C5 /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
+		081414CD2A1A1FCC008542C5 /* ReelsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsCollectionViewCell.swift; sourceTree = "<group>"; };
+		081414CE2A1A1FCC008542C5 /* ReelsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReelsCollectionViewCell.xib; sourceTree = "<group>"; };
+		081414D12A1A2ECF008542C5 /* ReelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsCell.swift; sourceTree = "<group>"; };
+		081414D32A1A3136008542C5 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		08230D2C29CF017300807BA2 /* Catstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08230D2F29CF017300807BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08230D3129CF017300807BA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +99,8 @@
 		083131B42A06421B00B86D3C /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		083131B92A07952D00B86D3C /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		083131BA2A07952D00B86D3C /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
+		084D83552A1A429500356CE3 /* dummyVideo01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dummyVideo01.mp4; path = Catstagram/dummyVideo01.mp4; sourceTree = SOURCE_ROOT; };
+		084D83572A1A42C500356CE3 /* dummyVideo02.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dummyVideo02.mp4; sourceTree = SOURCE_ROOT; };
 		0853E4722A13829400FE4889 /* FeedUploadInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadInput.swift; sourceTree = "<group>"; };
 		0853E4742A1382F100FE4889 /* FeedUploadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadModel.swift; sourceTree = "<group>"; };
 		0853E4762A1383D600FE4889 /* FeedUploadDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUploadDataManager.swift; sourceTree = "<group>"; };
@@ -143,6 +159,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		081414C52A1A15DF008542C5 /*  UserFeed */ = {
+			isa = PBXGroup;
+			children = (
+				0853E47C2A138C7C00FE4889 /* UserFeedModel.swift */,
+			);
+			path = " UserFeed";
+			sourceTree = "<group>";
+		};
+		081414C62A1A15F0008542C5 /* DeleteUserFeed */ = {
+			isa = PBXGroup;
+			children = (
+				081414C72A1A1625008542C5 /* DeleteUserFeed.swift */,
+			);
+			path = DeleteUserFeed;
+			sourceTree = "<group>";
+		};
 		08230D2329CF017300807BA2 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +203,13 @@
 				0853E4782A13890D00FE4889 /* App */,
 				0853E47A2A13899A00FE4889 /* UserInterface */,
 				08230D3529CF017300807BA2 /* Main.storyboard */,
+				084D83552A1A429500356CE3 /* dummyVideo01.mp4 */,
+				084D83572A1A42C500356CE3 /* dummyVideo02.mp4 */,
+				081414C92A1A1EE5008542C5 /* ReelsViewController.swift */,
+				081414D12A1A2ECF008542C5 /* ReelsCell.swift */,
+				081414D32A1A3136008542C5 /* VideoPlayerView.swift */,
+				081414CD2A1A1FCC008542C5 /* ReelsCollectionViewCell.swift */,
+				081414CE2A1A1FCC008542C5 /* ReelsCollectionViewCell.xib */,
 				08230D3A29CF017500807BA2 /* LaunchScreen.storyboard */,
 				08230D3329CF017300807BA2 /* ViewController.swift */,
 				08230D3829CF017500807BA2 /* Assets.xcassets */,
@@ -278,8 +317,9 @@
 		0853E47B2A138C6700FE4889 /* UserFeedDataManager */ = {
 			isa = PBXGroup;
 			children = (
-				0853E47C2A138C7C00FE4889 /* UserFeedModel.swift */,
 				0853E47E2A138F1700FE4889 /* UserFeedDataManager.swift */,
+				081414C62A1A15F0008542C5 /* DeleteUserFeed */,
+				081414C52A1A15DF008542C5 /*  UserFeed */,
 			);
 			path = UserFeedDataManager;
 			sourceTree = "<group>";
@@ -454,9 +494,12 @@
 				08230D3C29CF017500807BA2 /* LaunchScreen.storyboard in Resources */,
 				08EAA62829E56602007ADC1B /* FeedTableViewCell.xib in Resources */,
 				08230D3929CF017500807BA2 /* Assets.xcassets in Resources */,
+				084D83582A1A42C500356CE3 /* dummyVideo02.mp4 in Resources */,
 				083131B62A06421B00B86D3C /* ProfileCollectionViewCell.xib in Resources */,
 				08EAA62C29E812E5007ADC1B /* StoryTableViewCell.xib in Resources */,
 				08EAA63029E81EC2007ADC1B /* StoryCollectionViewCell.xib in Resources */,
+				084D83562A1A429500356CE3 /* dummyVideo01.mp4 in Resources */,
+				081414D02A1A1FCC008542C5 /* ReelsCollectionViewCell.xib in Resources */,
 				08230D3729CF017300807BA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,12 +632,15 @@
 				08E2564C2A1369BE005ECF9E /* FeedModel.swift in Sources */,
 				08E2564A2A1367D6005ECF9E /* FeedAPIInput.swift in Sources */,
 				08E2564E2A136A1A005ECF9E /* FeedDataManager.swift in Sources */,
+				081414C82A1A1625008542C5 /* DeleteUserFeed.swift in Sources */,
 				0853E47D2A138C7C00FE4889 /* UserFeedModel.swift in Sources */,
+				081414CA2A1A1EE5008542C5 /* ReelsViewController.swift in Sources */,
 				08230D6029CF1E3100807BA2 /* LogInViewController.swift in Sources */,
 				08230D6229CF2A1200807BA2 /* RegisterViewController.swift in Sources */,
 				08230D3429CF017300807BA2 /* ViewController.swift in Sources */,
 				083131BB2A07952D00B86D3C /* PostCollectionViewCell.swift in Sources */,
 				083131B52A06421B00B86D3C /* ProfileCollectionViewCell.swift in Sources */,
+				081414CF2A1A1FCC008542C5 /* ReelsCollectionViewCell.swift in Sources */,
 				0853E4732A13829400FE4889 /* FeedUploadInput.swift in Sources */,
 				083131B12A0638B400B86D3C /* ProfileViewController.swift in Sources */,
 				0856A4B429D1B573006DCCA8 /* UIViewController+Extension.swift in Sources */,
@@ -603,7 +649,9 @@
 				08230D3029CF017300807BA2 /* AppDelegate.swift in Sources */,
 				08230D3229CF017300807BA2 /* SceneDelegate.swift in Sources */,
 				0853E4752A1382F100FE4889 /* FeedUploadModel.swift in Sources */,
+				081414D22A1A2ECF008542C5 /* ReelsCell.swift in Sources */,
 				08EAA62F29E81EC2007ADC1B /* StoryCollectionViewCell.swift in Sources */,
+				081414D42A1A3136008542C5 /* VideoPlayerView.swift in Sources */,
 				0856A4B829D1EEDC006DCCA8 /* UserInfo.swift in Sources */,
 				0853E47F2A138F1700FE4889 /* UserFeedDataManager.swift in Sources */,
 				0856A4B629D1CB69006DCCA8 /* UIColor+Extension.swift in Sources */,

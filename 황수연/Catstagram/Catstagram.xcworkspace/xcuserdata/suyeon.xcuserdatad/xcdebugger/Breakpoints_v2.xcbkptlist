@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F26094B6-CF3E-49C7-9612-2A5972E8BA0C"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB005814-1FD2-4D69-ADB5-86204A4E9BF3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Catstagram/UserInterface/Authentication/RegisterViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "isValidEmail"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "FB005814-1FD2-4D69-ADB5-86204A4E9BF3 - f405b216e201a744"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Catstagram.RegisterViewController.isValidEmail.getter : Swift.Bool"
+                  moduleName = "Catstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suyeon/2023-1-iOS-Study/%E1%84%92%E1%85%AA%E1%86%BC%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB/Catstagram/Catstagram/UserInterface/Authentication/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "FB005814-1FD2-4D69-ADB5-86204A4E9BF3 - 86abe5175ee1ff18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Catstagram.RegisterViewController.isValidEmail.setter : Swift.Bool"
+                  moduleName = "Catstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suyeon/2023-1-iOS-Study/%E1%84%92%E1%85%AA%E1%86%BC%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB/Catstagram/Catstagram/UserInterface/Authentication/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "FB005814-1FD2-4D69-ADB5-86204A4E9BF3 - 427acc27c0dee3a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Catstagram.RegisterViewController.isValidEmail.modify : Swift.Bool"
+                  moduleName = "Catstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suyeon/2023-1-iOS-Study/%E1%84%92%E1%85%AA%E1%86%BC%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB/Catstagram/Catstagram/UserInterface/Authentication/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "FB005814-1FD2-4D69-ADB5-86204A4E9BF3 - cf8d5f2d3f22ad1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Catstagram.RegisterViewController.isValidEmail.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Catstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suyeon/2023-1-iOS-Study/%E1%84%92%E1%85%AA%E1%86%BC%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB/Catstagram/Catstagram/UserInterface/Authentication/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "FB005814-1FD2-4D69-ADB5-86204A4E9BF3 - 4c943efc2215e35e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Catstagram.RegisterViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Catstagram.RegisterViewController"
+                  moduleName = "Catstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suyeon/2023-1-iOS-Study/%E1%84%92%E1%85%AA%E1%86%BC%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB/Catstagram/Catstagram/UserInterface/Authentication/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "508">
+               </Location>
+               <Location
+                  uuid = "FB005814-1FD2-4D69-ADB5-86204A4E9BF3 - c6ad0cae18cfc898"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Catstagram.RegisterViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Catstagram.RegisterViewController&gt;"
+                  moduleName = "Catstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suyeon/2023-1-iOS-Study/%E1%84%92%E1%85%AA%E1%86%BC%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB/Catstagram/Catstagram/UserInterface/Authentication/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "465">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0933212-1BAB-4AFC-BFB0-639399779409"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Catstagram/UserInterface/Authentication/RegisterViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "isValidEmail"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B827A02C-F173-4A69-92B1-F271E8C1F88E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Catstagram/UserInterface/Authentication/RegisterViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "validateUserInfo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

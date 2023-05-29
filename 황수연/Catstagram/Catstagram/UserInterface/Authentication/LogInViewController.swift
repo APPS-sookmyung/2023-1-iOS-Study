@@ -45,10 +45,16 @@ class LogInViewController: UIViewController {
         // guard let 구문은 옵셔널을 해제하는 또다른 방법(다른 하나는 초깃값을 주는 방법임)
         // guard를 통해 데이터가 있다면 let으로 데이터 선언, 데이터가 없다면 else문으로 이동하여 해당 함수 실행이 종료됨
         guard let userInfo = self.userInfo else { return }
+        
         if userInfo.email == self.email && userInfo.password == self.password {
             let vc = storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as! UITabBarController
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+//            vc.modalPresentationStyle = .fullScreen
+//            self.present(vc, animated: true, completion: nil)
+            
+            // 위와 같은 방식으로 하면 로그인 후 탭바 컨트롤러로 넘어가도 로그인 화면이 뒤에 남아있게 됨
+            // 로그인 화면 위에 탭바 컨트롤러가 얹어진 격. 사용하지 않을 화면이 남아있으면 메모리 낭비임
+            // 아래의 코드를 적으면 이전에 있던 로그인 화면은 없어지고, 그 화면을 vc가 대체하게 됨.
+            self.view.window?.windowScene?.keyWindow?.rootViewController = vc
         }
         else{
             
